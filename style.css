@@ -1,0 +1,32 @@
+table {
+            font-family: Impact, sans-serif;
+            font-size: 30px;
+            background-color: white;
+           /* color: #968e8e;*/
+		   color: black;
+        }
+        td {
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            vertical-align: middle;
+        } 
+		/* все четные номера строк, нечетные номера столбцов*/
+        tr:nth-child(even) td:nth-child(odd) {
+            background-color: black;
+        }
+        tr:nth-child(odd) td:nth-child(even) {
+            background-color: black;
+        }
+		/*последний элемент родителя, нечетные номера столбцов */
+        tr:last-child td:nth-child(odd),
+		/*первый элемент родителя, четные номера столбцов */
+        tr:first-child td:nth-child(even){
+            background-color: white;
+        }
+        tr:nth-child(even) td:first-child{
+            background-color: white;
+        }
+        tr:nth-child(odd) td:last-child{
+            background-color: white;
+        }
